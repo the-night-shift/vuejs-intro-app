@@ -25,12 +25,17 @@
     <h1>{{ message }}</h1>
     <!-- <h3>{{ reviews }}</h3> -->
 
-    <!-- <input type="text" v-model="review"> -->
 
     <li v-for="review in reviews">
       {{ review.text }} here is the rating: {{review.rating}} here is the reviewer: {{ review.reviewer }}
     </li>
 
+    <!-- <input type="text" v-model="reviews[2].text"> -->
+
+    <p>text: <input type="text" v-model="newReview.text"></p>
+    <p>rating: <input type="text" v-model="newReview.rating"></p>
+    <p>reviewer: <input type="text" v-model="newReview.reviewer"></p>
+    <button v-on:click="addReview()">Submit a new review</button>
   </div>
 </template>
 

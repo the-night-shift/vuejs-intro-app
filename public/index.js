@@ -23,11 +23,17 @@ var HomePage = {
           rating: 2,
           reviewer: "Anyonmous"
         }
-      ]
+      ],
+      newReview: {text: "", rating: "", reviewer: ""}
     };
   },
   created: function() {},
-  methods: {},
+  methods: {
+    addReview: function() {
+      console.log('adding the review...');
+      this.reviews.push(this.newReview);
+    }
+  },
   computed: {}
 };
 
