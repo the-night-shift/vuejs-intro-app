@@ -26,7 +26,7 @@
     <!-- <h3>{{ reviews }}</h3> -->
 
 
-    <li v-for="review in reviews">
+    <li v-for="review in reviews" v-on:click="removeReview(review)" v-if="isPositive(review)">
       {{ review.text }} here is the rating: {{review.rating}} here is the reviewer: {{ review.reviewer }}
     </li>
 

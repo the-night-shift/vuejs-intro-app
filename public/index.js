@@ -35,6 +35,20 @@ var HomePage = {
         this.reviews.push(this.newReview);
         this.newReview = {text: "", rating: "", reviewer: ""};
       }
+    },
+    removeReview: function(theReview) {
+      console.log('in removing review');
+      // console.log(theReview);
+      // find the index of the particular review
+      var index = this.reviews.indexOf(theReview);
+      console.log(index);
+      // remove that index from the array
+      this.reviews.splice(index, 1);
+    },
+    isPositive: function(theReview) {
+      var text = theReview.text;
+      var text = "vuejs is bad"
+      return text.indexOf('bad') === -1;
     }
   },
   computed: {}
