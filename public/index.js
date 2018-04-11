@@ -30,8 +30,11 @@ var HomePage = {
   created: function() {},
   methods: {
     addReview: function() {
-      console.log('adding the review...');
-      this.reviews.push(this.newReview);
+      if (this.newReview.text !== "") {
+        console.log('adding the review...');
+        this.reviews.push(this.newReview);
+        this.newReview = {text: "", rating: "", reviewer: ""};
+      }
     }
   },
   computed: {}
