@@ -7,7 +7,23 @@ var HomePage = {
   data: function() {
     return {
       message: "Welcome to Vue.js!",
-      review: "This was fun"
+      reviews: [
+        {
+          text: "Vue.js is the best thing since sliced bread",
+          rating: 5,
+          reviewer: "Mary Poppins"
+        },
+        {
+          text: "I love Vue.js",
+          rating: 5,
+          reviewer: "Pat Brown"
+        },
+        {
+          text: "I don't love Vue.js",
+          rating: 2,
+          reviewer: "Anyonmous"
+        }
+      ]
     };
   },
   created: function() {},

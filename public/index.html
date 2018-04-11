@@ -23,9 +23,13 @@
   <div class="vue-component">
 
     <h1>{{ message }}</h1>
-    <h3>{{ review }}</h3>
+    <!-- <h3>{{ reviews }}</h3> -->
 
-    <input type="text" v-model="review">
+    <!-- <input type="text" v-model="review"> -->
+
+    <li v-for="review in reviews">
+      {{ review.text }} here is the rating: {{review.rating}} here is the reviewer: {{ review.reviewer }}
+    </li>
 
   </div>
 </template>
